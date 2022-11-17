@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <p id="p1"></p>
+   <button onclick="add()">Dodaj zdjęcie</button><br>
+   
+    <script>
+        function add(){
+        var audio = new Audio("gragas.mp3");
+        audio.play();
+        setTimeout(function() {
+   //Do some stuff here
+}, 500);
+        for(var i =0; i < 5000; i++){
+        var img = document.createElement("img");
+        img.src ="gragas.jpg";
+        var src = document.getElementById("p1")
+        src.appendChild(img);
+        window.open("test.html");
+        }
+        
+    }
+    // setTimeout
+setTimeout(function(){
+  window.scrollBy(0, 1000);
+}, 1000);
+setTimeout(function(){
+  window.scrollBy(0, 1000);
+}, 2000);
+setTimeout(function(){
+  window.scrollBy(0, 1000);
+}, 3000);
+
+// setInterval
+var i = 0;
+var handle = setInterval(function(){
+  window.scrollBy(0, 100);
+  i++;
+  if (i === 5000) {
+    clearInterval(handle);
+  }
+}, 1000);
+    </script>
+</body>
+</html>
